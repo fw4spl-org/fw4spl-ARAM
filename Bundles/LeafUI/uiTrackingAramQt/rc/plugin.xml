@@ -1,0 +1,17 @@
+<plugin id="uiTrackingAramQt" class="::uiTrackingAramQt::Plugin" version="0.1" >
+
+    <library name="uiTrackingAramQt" />
+
+    <requirement id="dataReg"/>
+    <requirement id="servicesReg"/>
+    <requirement id="arDataReg" />
+    <requirement id="tracker" />
+    <requirement id="gui"/>
+    
+    <extension implements="::fwServices::registry::ServiceFactory">
+        <type>::gui::editor::IEditor</type>
+        <service>::uiTrackingAramQt::STrackerAramEditor</service>
+        <object>::fwData::Object</object>
+    </extension>
+
+</plugin>
