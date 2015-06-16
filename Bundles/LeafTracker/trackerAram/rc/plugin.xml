@@ -1,0 +1,16 @@
+<plugin id="trackerAram" class="::trackerAram::Plugin" version="0.1" >
+
+    <library name="trackerAram" />
+
+    <requirement id="dataReg"/>
+    <requirement id="servicesReg"/>
+    <requirement id="arDataReg" />
+    <requirement id="tracker" />
+    
+    <extension implements="::fwServices::registry::ServiceFactory">
+        <type>::tracker::ITracker</type>
+        <service>::trackerAram::SAramTracker</service>
+        <object>::fwData::Composite</object>
+    </extension>
+
+</plugin>
